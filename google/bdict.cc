@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/hunspell/google/bdict.h"
+#include "bdict.h"
 
 // static
 bool hunspell::BDict::Verify(const char* bdict_data, size_t bdict_length) {

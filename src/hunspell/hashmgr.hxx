@@ -12,9 +12,7 @@
 #include <string>
 #include <map>
 
-#include "base/stl_util.h"
-#include "base/string_piece.h"
-#include "third_party/hunspell/google/bdict_reader.h"
+#include "../../google/bdict_reader.h"
 #endif
 
 enum flag { FLAG_CHAR, FLAG_LONG, FLAG_NUM, FLAG_UNI };

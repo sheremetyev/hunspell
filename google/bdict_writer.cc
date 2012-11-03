@@ -2,11 +2,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/hunspell/google/bdict_writer.h"
+#include "bdict_writer.h"
 
-#include "base/logging.h"
-#include "base/stringprintf.h"
-#include "third_party/hunspell/google/bdict.h"
+#include "bdict.h"
 
 namespace hunspell {
 

@@ -5,9 +5,6 @@
 #ifndef CHROME_THIRD_PARTY_HUNSPELL_GOOGLE_BDICT_H__
 #define CHROME_THIRD_PARTY_HUNSPELL_GOOGLE_BDICT_H__
 
-#include "base/basictypes.h"
-#include "base/md5.h"
-
 // BDict (binary dictionary) format. All offsets are little endian.
 //
 // Header (28 bytes).

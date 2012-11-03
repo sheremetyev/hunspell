@@ -8,8 +8,7 @@
 #include <string>
 #include <vector>
 
-#include "base/basictypes.h"
-#include "third_party/hunspell/google/bdict.h"
+#include "bdict.h"
 
 namespace hunspell {
 
