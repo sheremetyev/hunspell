@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -15,16 +15,16 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>hunspell</RootNamespace>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
-  <ImportGroup Label="ExtensionSettings"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
-  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\.\bin\;$(MSBuildProjectDirectory)\.\bin\</ExecutablePath>
     <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
@@ -65,49 +65,47 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="hunspell.gyp"/>
+    <None Include="hunspell.gyp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\parsers\textparser.hxx"/>
-    <ClInclude Include="src\hunspell\hashmgr.hxx"/>
-    <ClInclude Include="src\hunspell\replist.hxx"/>
-    <ClInclude Include="src\hunspell\hunzip.hxx"/>
-    <ClInclude Include="src\hunspell\affixmgr.hxx"/>
-    <ClInclude Include="src\hunspell\w_char.hxx"/>
-    <ClInclude Include="src\hunspell\utf_info.hxx"/>
-    <ClInclude Include="src\hunspell\baseaffix.hxx"/>
-    <ClInclude Include="src\hunspell\atypes.hxx"/>
-    <ClInclude Include="src\hunspell\hunspell.h"/>
-    <ClInclude Include="src\hunspell\filemgr.hxx"/>
-    <ClInclude Include="src\hunspell\dictmgr.hxx"/>
-    <ClInclude Include="src\hunspell\suggestmgr.hxx"/>
-    <ClInclude Include="src\hunspell\htypes.hxx"/>
-    <ClInclude Include="src\hunspell\csutil.hxx"/>
-    <ClInclude Include="src\hunspell\affentry.hxx"/>
-    <ClInclude Include="src\hunspell\phonet.hxx"/>
-    <ClInclude Include="src\hunspell\hunspell.hxx"/>
-    <ClInclude Include="src\hunspell\langnum.hxx"/>
-    <ClInclude Include="google\bdict_reader.h"/>
-    <ClInclude Include="google\bdict.h"/>
-    <ClInclude Include="google\bdict_writer.h"/>
+    <ClInclude Include="src\parsers\textparser.hxx" />
+    <ClInclude Include="src\hunspell\hashmgr.hxx" />
+    <ClInclude Include="src\hunspell\replist.hxx" />
+    <ClInclude Include="src\hunspell\hunzip.hxx" />
+    <ClInclude Include="src\hunspell\affixmgr.hxx" />
+    <ClInclude Include="src\hunspell\w_char.hxx" />
+    <ClInclude Include="src\hunspell\utf_info.hxx" />
+    <ClInclude Include="src\hunspell\baseaffix.hxx" />
+    <ClInclude Include="src\hunspell\atypes.hxx" />
+    <ClInclude Include="src\hunspell\hunspell.h" />
+    <ClInclude Include="src\hunspell\filemgr.hxx" />
+    <ClInclude Include="src\hunspell\dictmgr.hxx" />
+    <ClInclude Include="src\hunspell\suggestmgr.hxx" />
+    <ClInclude Include="src\hunspell\htypes.hxx" />
+    <ClInclude Include="src\hunspell\csutil.hxx" />
+    <ClInclude Include="src\hunspell\affentry.hxx" />
+    <ClInclude Include="src\hunspell\phonet.hxx" />
+    <ClInclude Include="src\hunspell\hunspell.hxx" />
+    <ClInclude Include="src\hunspell\langnum.hxx" />
+    <ClInclude Include="google\bdict_reader.h" />
+    <ClInclude Include="google\bdict.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\parsers\textparser.cxx"/>
-    <ClCompile Include="src\hunspell\filemgr.cxx"/>
-    <ClCompile Include="src\hunspell\csutil.cxx"/>
-    <ClCompile Include="src\hunspell\hunspell.cxx"/>
-    <ClCompile Include="src\hunspell\affixmgr.cxx"/>
-    <ClCompile Include="src\hunspell\hunzip.cxx"/>
-    <ClCompile Include="src\hunspell\hashmgr.cxx"/>
-    <ClCompile Include="src\hunspell\affentry.cxx"/>
-    <ClCompile Include="src\hunspell\dictmgr.cxx"/>
-    <ClCompile Include="src\hunspell\suggestmgr.cxx"/>
-    <ClCompile Include="src\hunspell\replist.cxx"/>
-    <ClCompile Include="src\hunspell\phonet.cxx"/>
-    <ClCompile Include="google\bdict.cc"/>
-    <ClCompile Include="google\bdict_writer.cc"/>
-    <ClCompile Include="google\bdict_reader.cc"/>
+    <ClCompile Include="src\parsers\textparser.cxx" />
+    <ClCompile Include="src\hunspell\filemgr.cxx" />
+    <ClCompile Include="src\hunspell\csutil.cxx" />
+    <ClCompile Include="src\hunspell\hunspell.cxx" />
+    <ClCompile Include="src\hunspell\affixmgr.cxx" />
+    <ClCompile Include="src\hunspell\hunzip.cxx" />
+    <ClCompile Include="src\hunspell\hashmgr.cxx" />
+    <ClCompile Include="src\hunspell\affentry.cxx" />
+    <ClCompile Include="src\hunspell\dictmgr.cxx" />
+    <ClCompile Include="src\hunspell\suggestmgr.cxx" />
+    <ClCompile Include="src\hunspell\replist.cxx" />
+    <ClCompile Include="src\hunspell\phonet.cxx" />
+    <ClCompile Include="google\bdict.cc" />
+    <ClCompile Include="google\bdict_reader.cc" />
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
-  <ImportGroup Label="ExtensionTargets"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
 </Project>
