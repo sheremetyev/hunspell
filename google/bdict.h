@@ -5,6 +5,10 @@
 #ifndef CHROME_THIRD_PARTY_HUNSPELL_GOOGLE_BDICT_H__
 #define CHROME_THIRD_PARTY_HUNSPELL_GOOGLE_BDICT_H__
 
+typedef unsigned char uint8;
+typedef unsigned short uint16;
+typedef unsigned int uint32;
+
 // BDict (binary dictionary) format. All offsets are little endian.
 //
 // Header (28 bytes).
