@@ -11,15 +11,12 @@
       'defines': [
         'HUNSPELL_STATIC',
         'HUNSPELL_CHROME_CLIENT',
-        'OPENOFFICEORG',
       ],
       'sources': [
         'google/bdict.cc',
         'google/bdict.h',
         'google/bdict_reader.cc',
         'google/bdict_reader.h',
-        'google/bdict_writer.cc',
-        'google/bdict_writer.h',
         'src/hunspell/affentry.cxx',
         'src/hunspell/affentry.hxx',
         'src/hunspell/affixmgr.cxx',
