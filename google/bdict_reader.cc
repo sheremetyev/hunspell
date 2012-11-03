@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 #include "bdict_reader.h"
+#include <assert.h>
 
 namespace hunspell {
 
@@ -366,7 +367,7 @@ int NodeReader::FindInLookup(
     if (ReaderForLookupAt(offset_in_table, &dummy_char, &child_reader) !=
         FIND_NODE)
       return 0;
-    DCHECK(dummy_char == static_cast<char>(next_char));
+    assert(dummy_char == static_cast<char>(next_char));
   }
 
   if (!child_reader.is_valid())
@@ -476,7 +477,7 @@ int NodeReader::FindInList(
       NodeReader child_reader;
       if (ReaderForListAt(i, &dummy_char, &child_reader) != FIND_NODE)
         return 0;
-      DCHECK(dummy_char == static_cast<char>(next_char));
+      assert(dummy_char == static_cast<char>(next_char));
       return child_reader.FindWord(word, affix_indices);
     }
   }
