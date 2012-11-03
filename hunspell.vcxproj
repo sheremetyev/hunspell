@@ -36,6 +36,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;__WIN32;_WINDOWS;HUNSPELL_STATIC;HUNSPELL_CHROME_CLIENT;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
@@ -52,6 +53,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;__WIN32;_WINDOWS;HUNSPELL_STATIC;HUNSPELL_CHROME_CLIENT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
