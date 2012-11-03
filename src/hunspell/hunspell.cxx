@@ -1976,6 +1976,13 @@ Hunhandle *Hunspell_create_key(const char * affpath, const char * dpath,
 #endif
 }
 
+#ifdef HUNSPELL_CHROME_CLIENT
+Hunhandle *Hunspell_create_bdict(const unsigned char* bdict_data, size_t bdict_length)
+{
+        return (Hunhandle*)(new Hunspell(bdict_data, bdict_length));
+}
+#endif
+
 void Hunspell_destroy(Hunhandle *pHunspell)
 {
         delete (Hunspell*)(pHunspell);

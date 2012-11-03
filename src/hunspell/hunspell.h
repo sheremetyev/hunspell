@@ -14,6 +14,10 @@ LIBHUNSPELL_DLL_EXPORTED Hunhandle *Hunspell_create(const char * affpath, const 
 LIBHUNSPELL_DLL_EXPORTED Hunhandle *Hunspell_create_key(const char * affpath, const char * dpath,
     const char * key);
 
+#ifdef HUNSPELL_CHROME_CLIENT
+LIBHUNSPELL_DLL_EXPORTED Hunhandle *Hunspell_create_bdict(const unsigned char* bdict_data, size_t bdict_length);
+#endif
+
 LIBHUNSPELL_DLL_EXPORTED void Hunspell_destroy(Hunhandle *pHunspell);
 
 /* spell(word) - spellcheck word
