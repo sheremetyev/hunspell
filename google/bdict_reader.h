@@ -144,7 +144,8 @@ class BDictReader {
 
   const BDict::AffHeader* aff_header_;
 
-  DISALLOW_EVIL_CONSTRUCTORS(BDictReader);
+  BDictReader(const BDictReader&);
+  void operator=(const BDictReader&);
 };
 
 }  // namespace hunspell
