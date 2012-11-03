@@ -140,7 +140,7 @@ struct hentry * HashMgr::lookup(const char *word) const
   int affix_ids[hunspell::BDict::MAX_AFFIXES_PER_WORD];
   int affix_count = bdict_reader->FindWord(word, affix_ids);
   if (affix_count == 0) { // look for custom added word
-    std::map<base::StringPiece, int>::const_iterator iter = 
+    std::map<std::string, int>::const_iterator iter = 
       custom_word_to_affix_id_map_.find(word);
     if (iter != custom_word_to_affix_id_map_.end()) {
       affix_count = 1;
@@ -264,12 +264,12 @@ int HashMgr::add_word(const char * word, int wbl, int wcl, unsigned short * aff,
     	    free(hp);
        }
 #else
-    std::map<base::StringPiece, int>::iterator iter =
+    std::map<std::string, int>::iterator iter =
         custom_word_to_affix_id_map_.find(word);
     if(iter == custom_word_to_affix_id_map_.end()) {  // word needs to be added
       std::string* new_string_word = new std::string(word);
       pointer_to_strings_.push_back(new_string_word);
-      base::StringPiece sp(*(new_string_word));
+      std::string sp(*(new_string_word));
       custom_word_to_affix_id_map_[sp] = 0; // no affixes for custom words
       return 1;
     }
