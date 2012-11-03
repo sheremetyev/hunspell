@@ -6,12 +6,8 @@
   'targets': [
     {
       'target_name': 'hunspell',
-      'type': '<(library)',
+      'type': 'static_library',
       'msvs_guid': 'D5E8DCB2-9C61-446F-8BEE-B18CA0E0936E',
-      'dependencies': [
-        '../../base/base.gyp:base',
-        '../icu/icu.gyp:icuuc',
-      ],
       'defines': [
         'HUNSPELL_STATIC',
         'HUNSPELL_CHROME_CLIENT',
@@ -63,30 +59,47 @@
           'USE_HUNSPELL',
         ],
       },
-      'conditions': [
-        ['os_posix == 1 and OS != "mac"', {
-          'cflags': [
-            '-Wno-unused-value',
-            '-Wno-unused-variable',
-            '-Wno-write-strings',
-          ],
-        }],
-        ['clang == 1', {
-          'xcode_settings': {
-            'WARNING_CFLAGS': [
-              # affentry.cxx has one `while ((p = nextchar(p)));` parsing loop.
-              '-Wno-empty-body',
-              # affentry.hxx has NULL as default parameter for a FLAG in two
-              # places.
-              '-Wno-null-conversion',
-            ],
-          },
-          'cflags': [
-            '-Wno-empty-body',
-            '-Wno-null-conversion',
-          ],
-        }],
-      ],
     },
+  ],
+
+  'target_defaults': {
+    'configurations': {
+      'Debug': {
+        'defines': [
+          'DEBUG',
+        ],
+      },
+      'Release': {
+        'defines': [
+          'NDEBUG',
+        ],
+      },
+    },
+  },
+
+  # define default project settings
+  'conditions': [
+    ['OS=="win"', {
+      'target_defaults': {
+        'defines': [
+          'WIN32',
+          '__WIN32',
+          '_WINDOWS',
+        ],
+        'msvs_settings': {
+          'VCLinkerTool': {
+            'GenerateDebugInformation': 'true',
+            # SubSystem values:
+            #   0 == not set
+            #   1 == /SUBSYSTEM:CONSOLE
+            #   2 == /SUBSYSTEM:WINDOWS
+            'SubSystem': '1',
+          },
+          'VCCLCompilerTool': {
+            'Optimization': '0'
+          }
+        },
+      },
+    }],
   ],
 }
