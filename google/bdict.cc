@@ -27,14 +27,5 @@ bool hunspell::BDict::Verify(const char* bdict_data, size_t bdict_length) {
   if (aff_header->affix_group_offset + sizeof(uint32) > bdict_length)
     return false;
 
-  // The new BDICT header has a MD5 digest of the dictionary data. Compare the
-  // MD5 digest of the data with the one in the BDICT header.
-  if (header->major_version >= 2) {
-    base::MD5Digest digest;
-    base::MD5Sum(aff_header, bdict_length - header->aff_offset, &digest);
-    if (memcmp(&digest, &header->digest, sizeof(digest)))
-      return false;
-  }
-
   return true;
 }

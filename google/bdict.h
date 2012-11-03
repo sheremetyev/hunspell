@@ -117,9 +117,6 @@ class BDict {
 
     uint32 aff_offset;  // Offset of the aff data.
     uint32 dic_offset;  // Offset of the dic data.
-
-    // Added by version 2.0.
-    base::MD5Digest digest;  // MD5 digest of the aff data and the dic data.
   };
 
   // AFF section ===============================================================
